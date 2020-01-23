@@ -1,0 +1,43 @@
+{
+	"name": "hackpot",
+	"version": "0.12.0",
+	"displayName": "Hackpot",
+	"description": "Welcome to the jungle!",
+	"publisher": "wwmyers",
+	"repository": "https://github.com/wwmyers/hackpot",
+	"license": "MIT",
+	"keywords": [
+		"jungle",
+		"woods",
+		"forest",
+		"dark",
+		"nature",
+		"earth",
+		"green",
+		"weed",
+		"hacker",
+		"hack",
+		"pot"
+	],
+	"icon": "images/icon.png",
+	"engines": {
+		"vscode": "^1.41.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Hackpot",
+				"uiTheme": "vs-dark",
+				"path": "./themes/hackpot-color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "956c4da7-1e99-428f-a004-23880220bb88",
+		"publisherId": "6e557b81-1d2e-4fd4-84c4-8a1691926138",
+		"publisherDisplayName": "wwmyers"
+	}
+}

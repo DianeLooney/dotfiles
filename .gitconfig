@@ -1,0 +1,8 @@
+[user]
+	name = Diane Looney
+	email = diane@dianelooney.com
+[core]
+	editor = vim
+
+[diff]
+	tool = vimdiff

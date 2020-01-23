@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+
+*.log
+**/*.log
+
+copy.sh
+img/admin
+notes.md
+

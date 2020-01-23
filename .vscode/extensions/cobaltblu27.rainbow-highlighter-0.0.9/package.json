@@ -1,0 +1,92 @@
+{
+	"name": "rainbow-highlighter",
+	"displayName": "Rainbow Highlighter",
+	"description": " Highlight multiple variables you select, with multiple colors, making important variables stand out in the code. Because more colors in our life == good :)",
+	"version": "0.0.9",
+	"publisher": "cobaltblu27",
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cobaltblu27/rainbow-highlighter.git"
+	},
+	"main": "./out/extension.js",
+	"icon": "images/icon.png",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "rainbow-highlighter configuration",
+			"properties": {
+				"rainbow-highlighter.palette": {
+					"type": "array",
+					"default": [
+						"rgb(255,255,64)",
+						"rgb(127,255,127)",
+						"rgb(255,127,255)",
+						"rgb(79,236,236)"
+					]
+				},
+				"rainbow-highlighter.background-alpha": {
+					"type": "number",
+					"default": 0.27
+				},
+				"rainbow-highlighter.use-border": {
+					"type": "boolean",
+					"default": true
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "rainbow-highlighter.toggleHighlight",
+				"title": "Rainbow Highlighter: Toggle Highlight"
+			},
+			{
+				"command": "rainbow-highlighter.removeHighlight",
+				"title": "RainBow Highlighter: Remove Highlight"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "rainbow-highlighter.toggleHighlight",
+				"key": "shift+alt+z"
+			},
+			{
+				"command": "rainbow-highlighter.removeHighlight",
+				"key": "shift+alt+a"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "yarn run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^10.12.21",
+		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28"
+	},
+	"dependencies": {
+		"fstream": "^1.0.12",
+		"js-yaml": "^3.13.1",
+		"querystringify": "^2.0.0",
+		"tar": "^4.4.2"
+	},
+	"__metadata": {
+		"id": "c8be78f5-af32-489c-a515-26764a23c7fb",
+		"publisherId": "d326db47-dda0-46ad-a015-68a1453fc9c2",
+		"publisherDisplayName": "cobaltblu27"
+	}
+}
